@@ -7,16 +7,21 @@ a {
 }
 h1 {
   font-size:45px;
-  text-align:center;
-  border-bottom:1px solid gray;
   margin:0;
-  padding:20px;
+}
+input {
+  margin-top:20px;
 }
 ol {
   border-right:1px solid gray;
   width:100px;
   margin:0;
   padding:20px;
+}
+#header {
+  text-align:center;
+  border-bottom:1px solid gray;
+  padding:40px;
 }
 #grid {
   display:grid;
@@ -27,6 +32,10 @@ ol {
 }
 #article {
   padding-left: 24px;
+}
+#footer {
+  text-align:center;
+  padding:20px;
 }
 @media (max-width:800px){
   #grid {

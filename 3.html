@@ -4,9 +4,40 @@
   <title>WEB1 - JavaScript</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="./style.css">
+  <script>
+    function nightDayHandler(self){
+        var target = document.querySelector('body');
+        var links = document.querySelectorAll('a');
+
+        if(self.value === 'night'){
+            target.style.backgroundColor='black';
+            target.style.color='white';
+            var i = 0;
+            while(i < links.length){
+              links[i].style.color='powderblue';
+              i = i+1;
+            }
+            self.value='day'
+        } else{
+            target.style.backgroundColor='white';
+            target.style.color='black';
+            var i = 0;
+            while(i < links.length){
+              links[i].style.color='blue';
+              i = i+1;
+            }
+            self.value='night'
+        }
+    }
+  </script>
 </head>
 <body>
-  <h1><a href="index.html">WEB</a></h1>
+  <div id="header">
+    <h1><a href="index.html">WEB</a></h1>
+    <input id="night_day" type="button" value="night" onclick="
+      nightDayHandler(this);
+    ">
+  </div>
   <div id="grid">
     <ol>
       <li><a href="1.html">HTML</a></li>
@@ -20,5 +51,10 @@
       </p>
     </div>
   </div>
+  <div id="footer">
+    <input id="night_day" type="button" value="night" onclick="
+      nightDayHandler(this);
+    ">
+  </div>  
 </body>
 </html>
